@@ -8,7 +8,7 @@
 
 ## :bell: Visit the site
 
-➡️<del>[Visit the Site!(Vercel)](https://react-tictactoe-app.vercel.app/)</del>
+➡️[Visit the Site!(Vercel)](https://disney-plus-app-clone.vercel.app/)
 
 ➡️<del>[Visit the Site!(Github pages)](https://0112shpark.github.io/react-tictactoe-app/)</del>
 
