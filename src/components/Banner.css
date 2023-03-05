@@ -55,7 +55,7 @@
 .banner__description {
   width: 45rem;
   line-height: 1.3;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
   font-weight: 500;
   font-size: 1rem;
   max-width: 400px;
@@ -87,4 +87,30 @@
   font-weight: 700;
   padding: 0.4rem 1rem;
   margin-right: 1rem;
+}
+
+.banner__button:hover {
+  color: #000;
+  background-color: rgba(170, 170, 170, 0.9);
+  transition: all 0.2s;
+}
+
+.play {
+  background-color: white;
+  color: black;
+}
+
+button {
+  border-radius: 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+button:hover {
+  color: #000;
+  background-color: rgba(170, 170, 170, 0.9);
+  transition: all 0.2s;
 }
