@@ -3,9 +3,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useCallback } from "react";
 import "./Row.css";
+import MovieModal from "./MovieModal";
 
 const Row = ({ title, id, fetchUrl }) => {
   const [movies, setMovies] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
 
   // usecallback 을 사용해 fetchUrl의 값이 변하지 않았으면
   // 함수 재 생성X
@@ -17,6 +19,10 @@ const Row = ({ title, id, fetchUrl }) => {
   useEffect(() => {
     fetchMovieDate();
   }, [fetchMovieDate]);
+
+  const handleClick = (movie) => {
+    setModalOpen(true);
+  };
 
   return (
     <div>
@@ -40,6 +46,7 @@ const Row = ({ title, id, fetchUrl }) => {
               className="row__poster"
               src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
               alt={movie.name}
+              onClick={() => handleClick(movie)}
             ></img>
           ))}
           <div className="slider__arrow-right">
@@ -55,6 +62,7 @@ const Row = ({ title, id, fetchUrl }) => {
           </div>
         </div>
       </div>
+      {modalOpen && <MovieModal setModalOpen={setModalOpen} />}
     </div>
   );
 };
