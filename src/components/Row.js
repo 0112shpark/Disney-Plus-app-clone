@@ -8,6 +8,7 @@ import MovieModal from "./MovieModal";
 const Row = ({ title, id, fetchUrl }) => {
   const [movies, setMovies] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
+  const [movieSelected, setMovieSelected] = useState({});
 
   // usecallback 을 사용해 fetchUrl의 값이 변하지 않았으면
   // 함수 재 생성X
@@ -22,6 +23,7 @@ const Row = ({ title, id, fetchUrl }) => {
 
   const handleClick = (movie) => {
     setModalOpen(true);
+    setMovieSelected(movie);
   };
 
   return (
@@ -62,7 +64,9 @@ const Row = ({ title, id, fetchUrl }) => {
           </div>
         </div>
       </div>
-      {modalOpen && <MovieModal setModalOpen={setModalOpen} />}
+      {modalOpen && (
+        <MovieModal {...movieSelected} setModalOpen={setModalOpen} />
+      )}
     </div>
   );
 };
