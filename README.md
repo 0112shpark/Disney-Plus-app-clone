@@ -46,19 +46,19 @@ Clone Disney-Plus website using `MovieDB`.
 
 - `npm install`
 
-3. Install `Axios module`.**(on your terminal.)**
+4. Install `Axios module`.**(on your terminal.)**
 
 - `npm install axios --save`
 
-3. Install `styled component module`.**(on your terminal.)**
+5. Install `styled component module`.**(on your terminal.)**
 
 - `npm install styled-components --save`
 
-3. Install `react-router-dom`.**(on your terminal.)**
+6. Install `react-router-dom`.**(on your terminal.)**
 
 - `npm install react-router-dom --save`
 
-4. Run development server with following command.**(on your terminal.)**
+7. Run development server with following command.**(on your terminal.)**
 
 - `npm start`
 
