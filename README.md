@@ -21,6 +21,7 @@ Clone Disney-Plus website using `MovieDB`.
 - Show recent movie on `banner`, and it changes every time you refresh the page.
 - Small Company icons and hover effects.
 - Show different categories of movies, and show details if clicked on.
+- Support Movie Search function.
 
 ## ⛏️Built with
 
