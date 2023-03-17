@@ -17,17 +17,17 @@ const Banner = () => {
   const fetchData = async () => {
     // 현재 상영중인 영화정보
     const response = await axios.get(requests.fetchNowPlaying);
-    console.log("response", response);
+    // console.log("response", response);
     // 영화 하나 select
     const movieId =
       response.data.results[
         Math.floor(Math.random() * response.data.results.length)
       ].id;
-    console.log("id", movieId);
+    // console.log("id", movieId);
     const { data: movieDetail } = await axios.get(`movie/${movieId}`, {
       params: { append_to_response: "videos" },
     });
-    console.log("movieDetail", movieDetail);
+    // console.log("movieDetail", movieDetail);
     setMovie(movieDetail);
   };
 

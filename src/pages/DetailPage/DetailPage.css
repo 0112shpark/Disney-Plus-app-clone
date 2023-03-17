@@ -1,0 +1,41 @@
+section {
+  position: relative;
+  top: 72px;
+}
+.wrapper {
+  display: flex;
+  top: 50px;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+.modal__poster-img {
+  max-width: 800px;
+  border-radius: 10px;
+  margin: 10px 30px;
+  height: auto;
+}
+.modal__content {
+  padding: 40px;
+  color: white;
+}
+
+.modal__title {
+  padding: 0;
+  font-size: 40px;
+  margin: 16px 0;
+}
+
+.modal__details {
+  font-weight: 600;
+  font-size: 18px;
+}
+.modal__overview {
+  font-size: 20px;
+  line-height: 1.5;
+}
+button {
+  position: fixed;
+  z-index: 99;
+  opacity: 0.5;
+}

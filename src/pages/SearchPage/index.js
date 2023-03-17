@@ -18,10 +18,10 @@ const SearchPage = () => {
       fetchSearchMovie(debouncedSearchTerm);
     }
   }, [debouncedSearchTerm]);
-  const fetchSearchMovie = async (searchTerm) => {
+  const fetchSearchMovie = async (debouncedSearchTerm) => {
     try {
       const response = await axios.get(
-        `/search/multi?include_adult=false&query=${searchTerm}`
+        `/search/multi?include_adult=false&query=${debouncedSearchTerm}`
       );
       setSearchResult(response.data.results);
     } catch (error) {
