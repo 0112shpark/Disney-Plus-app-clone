@@ -7,21 +7,45 @@ import styled from "styled-components";
 const DetailPage = () => {
   let { movieId } = useParams();
   const [movie, setMovie] = useState({});
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get(`movie/${movieId}`);
-      setMovie(response.data);
+      try {
+        const response = await axios.get(`movie/${movieId}`);
+
+        setMovie(response.data);
+      } catch (error) {
+        setError(true);
+      }
     }
 
     fetchData();
   }, [movieId]);
 
-  if (!movie) return null;
+  if (!movie || error)
+    return (
+      <section>
+        <ButtonContainer>
+          <button
+            className="list_back"
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            Go back to List
+          </button>
+        </ButtonContainer>
+        <span className="error">
+          <p>Movie Detail Not found.</p>
+        </span>
+      </section>
+    );
   return (
     <section>
       <ButtonContainer>
         <button
+          className="list_back"
           onClick={() => {
             navigate(-1);
           }}

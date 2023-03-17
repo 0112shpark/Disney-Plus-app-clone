@@ -34,8 +34,13 @@ section {
   font-size: 20px;
   line-height: 1.5;
 }
-button {
+.list_back {
   position: fixed;
   z-index: 99;
   opacity: 0.5;
+}
+.error {
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
 }
