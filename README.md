@@ -61,6 +61,10 @@ Clone Disney-Plus website using `MovieDB`.
 
 - `npm install react-router-dom --save`
 
+7. Install `swiper`.**(on your terminal.)**
+
+- `npm install swiper --save`
+
 7. Run development server with following command.**(on your terminal.)**
 
 - `npm start`
