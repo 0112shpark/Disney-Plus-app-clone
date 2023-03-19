@@ -10,8 +10,10 @@
 
 ➡️[Visit the Site!(Vercel)](https://disney-plus-app-clone.vercel.app/)
 
-> Need to visit `https://disney-plus-app-clone.vercel.app/main` for now.  
-> Login page is not implemented yet.
+**Need to LOGIN with `Google Account`.**
+
+> <del>Need to visit `https://disney-plus-app-clone.vercel.app/main` for now.  
+> Login page is not implemented yet.</del>
 
 ➡️<del>[Visit the Site!(Github pages)](https://0112shpark.github.io/react-tictactoe-app/)</del>
 
