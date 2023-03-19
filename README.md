@@ -70,7 +70,7 @@ Clone Disney-Plus website using `MovieDB`.
 
 8. Install `firebase`.**(on your terminal.)**
 
-- `npm install firebase`
+- `npm install firebase --save`
 
 9. Run development server with following command.**(on your terminal.)**
 
