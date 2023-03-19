@@ -20,7 +20,7 @@ import "swiper/css/a11y";
 import styled from "styled-components";
 
 const Row = ({ title, id, fetchUrl, index }) => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([{ id: "movie", name: "movie" }]);
   const [modalOpen, setModalOpen] = useState(false);
   const [movieSelected, setMovieSelected] = useState({});
 
@@ -73,7 +73,7 @@ const Row = ({ title, id, fetchUrl, index }) => {
         }}
       >
         <Content id={id}>
-          <SwiperSlide className="empty"></SwiperSlide>
+          {/* <SwiperSlide className="empty"></SwiperSlide> */}
           {movies.map((movie) => (
             <SwiperSlide key={movie.id}>
               <Wrap>
