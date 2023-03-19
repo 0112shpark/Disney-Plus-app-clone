@@ -67,6 +67,7 @@ const Login = styled.a/*css*/ `
   letter-spacing: 1.5px;
   border: 1px solid #f9f9f9;
   transition: 0.2s ease 0s;
+  cursor: pointer;
 
   &:hover {
     background-color: #f9f9f9;
