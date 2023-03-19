@@ -68,7 +68,11 @@ Clone Disney-Plus website using `MovieDB`.
 
 - `npm install swiper --save`
 
-7. Run development server with following command.**(on your terminal.)**
+8. Install `firebase`.**(on your terminal.)**
+
+- `npm install firebase`
+
+9. Run development server with following command.**(on your terminal.)**
 
 - `npm start`
 
