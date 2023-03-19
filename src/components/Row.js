@@ -9,10 +9,6 @@ import MovieModal from "./MovieModal";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// import function to register Swiper custom elements
-import { register } from "swiper/element/bundle";
-// register Swiper custom elements
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -22,7 +18,7 @@ import "swiper/css/autoplay";
 import "swiper/css/a11y";
 
 import styled from "styled-components";
-register();
+
 const Row = ({ title, id, fetchUrl }) => {
   const [movies, setMovies] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
