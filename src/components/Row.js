@@ -19,7 +19,7 @@ import "swiper/css/a11y";
 
 import styled from "styled-components";
 
-const Row = ({ title, id, fetchUrl }) => {
+const Row = ({ title, id, fetchUrl, index }) => {
   const [movies, setMovies] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [movieSelected, setMovieSelected] = useState({});
@@ -50,7 +50,7 @@ const Row = ({ title, id, fetchUrl }) => {
         // install modules
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         loop={true}
-        autoplay={({ delay: 1000 }, { disableOnInteraction: true })}
+        autoplay={({ delay: `1000+${index}` }, { disableOnInteraction: true })}
         navigation //arrow버튼 사용
         pagination={{ clickable: true }} //page button사용
         breakpoints={{

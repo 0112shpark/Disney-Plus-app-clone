@@ -17,17 +17,20 @@ const MainPage = () => {
           title="Trending Now"
           id="TN"
           fetchUrl={requests.fetchTrending}
+          index="0"
         ></Row>
         <Row title="Top Rated" id="TR" fetchUrl={requests.fetchTopRated}></Row>
         <Row
           title="Action Movies"
           id="AM"
           fetchUrl={requests.fetchActionMovies}
+          index="1000"
         ></Row>
         <Row
           title="Comedy Movies"
           id="CM"
           fetchUrl={requests.fetchComedyMovies}
+          index="2000"
         ></Row>
       </Container>
     </div>
