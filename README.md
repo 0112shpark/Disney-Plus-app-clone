@@ -69,6 +69,8 @@ Clone Disney-Plus website using `MovieDB`.
 
 - `npm start`
 
-## 📚Some knowledges
+## 📚Issues
 
 ### 📃
+
+- `swiper.js` is not initialized at first. Needs to move with `touch slide` or click `pagination` buttons.
