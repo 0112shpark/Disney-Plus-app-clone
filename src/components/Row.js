@@ -50,7 +50,7 @@ const Row = ({ title, id, fetchUrl }) => {
         // install modules
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         loop={true}
-        autoplay={({ delay: 1000 }, { disableOnInteraction: false })}
+        autoplay={({ delay: 1000 }, { disableOnInteraction: true })}
         navigation //arrow버튼 사용
         pagination={{ clickable: true }} //page button사용
         breakpoints={{
@@ -73,6 +73,7 @@ const Row = ({ title, id, fetchUrl }) => {
         }}
       >
         <Content id={id}>
+          <SwiperSlide className="empty"></SwiperSlide>
           {movies.map((movie) => (
             <SwiperSlide key={movie.id}>
               <Wrap>
