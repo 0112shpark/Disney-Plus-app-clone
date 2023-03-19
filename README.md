@@ -10,6 +10,9 @@
 
 ➡️[Visit the Site!(Vercel)](https://disney-plus-app-clone.vercel.app/)
 
+> Need to visit `https://disney-plus-app-clone.vercel.app/main` for now.  
+> Login page is not implemented yet.
+
 ➡️<del>[Visit the Site!(Github pages)](https://0112shpark.github.io/react-tictactoe-app/)</del>
 
 ## 🧐 About
@@ -57,6 +60,10 @@ Clone Disney-Plus website using `MovieDB`.
 6. Install `react-router-dom`.**(on your terminal.)**
 
 - `npm install react-router-dom --save`
+
+7. Install `swiper`.**(on your terminal.)**
+
+- `npm install swiper --save`
 
 7. Run development server with following command.**(on your terminal.)**
 
