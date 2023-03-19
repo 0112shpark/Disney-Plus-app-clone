@@ -35,6 +35,9 @@ const Row = ({ title, id, fetchUrl }) => {
     fetchMovieDate();
   }, [fetchMovieDate]);
 
+  // useEffect(() => {
+  //   SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+  // }, []);
   const handleClick = (movie) => {
     setModalOpen(true);
     setMovieSelected(movie);
