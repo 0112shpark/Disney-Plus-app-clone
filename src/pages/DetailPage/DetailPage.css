@@ -19,7 +19,7 @@ section {
 .modal__contents {
   padding: 40px;
   color: white;
-  max-width: 1000px;
+  width: 800px;
 }
 @media screen and (max-width: 1168px) {
   .modal__contents {

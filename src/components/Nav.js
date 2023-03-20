@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -17,6 +17,7 @@ const Nav = () => {
   const { pathname } = useLocation();
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
+  const ref = useRef();
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -29,11 +30,7 @@ const Nav = () => {
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        setShow(true);
-      } else setShow(false);
-    });
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -43,12 +40,16 @@ const Nav = () => {
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setShow(true);
-    } else setShow(false);
+    } else {
+      setShow(false);
+    }
   };
 
   const handleChange = (e) => {
     setSearchValue(e.target.value);
     navigate(`/search?q=${e.target.value}`);
+    console.log(e.target.value);
+    ref.current.focus();
   };
 
   const handleAuth = () => {
@@ -77,6 +78,8 @@ const Nav = () => {
           onChange={handleChange}
           type="text"
           placeholder="제목을 검색해주세요."
+          ref={ref}
+          autoFocus={true}
         ></Input>
       )}
     </NavWrapper>
