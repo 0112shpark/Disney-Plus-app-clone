@@ -37,6 +37,18 @@ const Nav = () => {
     };
   }, []);
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      // setSearchValue(e.target.value);
+      // console.log(searchValue);
+      navigate(`/search?q=${searchValue}`);
+    }
+  };
+
+  const handleClick = () => {
+    navigate(`/search?q=${searchValue}`);
+  };
+
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setShow(true);
@@ -46,10 +58,13 @@ const Nav = () => {
   };
 
   const handleChange = (e) => {
-    setSearchValue(e.target.value);
-    navigate(`/search?q=${e.target.value}`);
-    console.log(e.target.value);
-    ref.current.focus();
+    if (pathname === "/search") {
+      setSearchValue(e.target.value);
+      // console.log(e.target.value);
+      navigate(`?q=${e.target.value}`);
+    } else {
+      setSearchValue(e.target.value);
+    }
   };
 
   const handleAuth = () => {
@@ -71,16 +86,22 @@ const Nav = () => {
       {pathname === "/" ? (
         <Login onClick={handleAuth}>Login</Login>
       ) : (
-        <Input
-          className="nav__input"
-          value={searchValue}
-          // keyboard typing
-          onChange={handleChange}
-          type="text"
-          placeholder="제목을 검색해주세요."
-          ref={ref}
-          autoFocus={true}
-        ></Input>
+        <>
+          <Input
+            className="nav__input"
+            value={searchValue}
+            // keyboard typing
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+            type="text"
+            placeholder="제목을 검색해주세요."
+            ref={ref}
+            autoFocus={true}
+          ></Input>
+          <Clickbutton>
+            <button onClick={handleClick}>button</button>
+          </Clickbutton>
+        </>
       )}
     </NavWrapper>
   );
@@ -104,6 +125,7 @@ const Login = styled.a/*css*/ `
   }
 `;
 
+const Clickbutton = styled.div``;
 const Input = styled.input/*css*/ `
   position: fixed;
   left: 50%;
