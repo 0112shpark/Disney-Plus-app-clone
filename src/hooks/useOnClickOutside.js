@@ -6,7 +6,8 @@ export default function useOnClickOutside(ref, handler) {
       if (!ref.current || ref.current.contains(event.target)) {
         return;
       }
-      if (event.key !== "Escape") {
+      if (event.key === "Escape") {
+        handler();
         return;
       }
       handler();

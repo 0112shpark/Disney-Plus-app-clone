@@ -50,7 +50,7 @@ const Row = ({ title, id, fetchUrl, index }) => {
         // install modules
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         loop={true}
-        autoplay={({ delay: `1000+${index}` }, { disableOnInteraction: true })}
+        // autoplay={({ delay: `1000+${index}` }, { disableOnInteraction: true })}
         navigation //arrow버튼 사용
         pagination={{ clickable: true }} //page button사용
         breakpoints={{
