@@ -13,7 +13,10 @@ import {
 const Nav = () => {
   const [show, setShow] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const [userData, setUserData] = useState({});
+  const initialUserData = localStorage.getItem("userData")
+    ? JSON.parse(localStorage.getItem("userData"))
+    : {};
+  const [userData, setUserData] = useState(initialUserData);
   const navigate = useNavigate();
   // returns current path.
   const { pathname } = useLocation();
@@ -29,7 +32,7 @@ const Nav = () => {
         navigate("/");
       }
     });
-  }, []);
+  }, [auth, navigate, pathname]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -73,6 +76,7 @@ const Nav = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         setUserData(result.user);
+        localStorage.setItem("userData", JSON.stringify(result.user));
       })
       .catch((error) => console.error(error));
   };
