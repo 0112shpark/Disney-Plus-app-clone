@@ -8,14 +8,12 @@
 
 ## :bell: Visit the site
 
-➡️[Visit the Site!(Vercel)](https://disney-plus-app-clone.vercel.app/)
+➡️[Visit the Site!(Firebase)](https://react-disney-plus-app-196b2.web.app/)
 
 **Need to LOGIN with `Google Account`.**
 
 > <del>Need to visit `https://disney-plus-app-clone.vercel.app/main` for now.  
 > Login page is not implemented yet.</del>
-
-➡️<del>[Visit the Site!(Github pages)](https://0112shpark.github.io/react-tictactoe-app/)</del>
 
 ## 🧐 About
 
