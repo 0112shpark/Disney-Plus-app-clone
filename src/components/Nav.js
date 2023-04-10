@@ -27,6 +27,7 @@ const Nav = () => {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
+        console.log(user);
         if (pathname === "/") navigate("/main");
       } else {
         navigate("/");
@@ -76,6 +77,7 @@ const Nav = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         setUserData(result.user);
+
         localStorage.setItem("userData", JSON.stringify(result.user));
       })
       .catch((error) => console.error(error));
